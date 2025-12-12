@@ -156,10 +156,10 @@
 
         excel {
             bindings = <
-          &trans          &trans              &kp F2                &mt LA(F4) F4    &kp F5       &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans
-          &kp UP_ARROW    &mt LEFT_ALT MINUS  &mt LEFT_SHIFT LC(C)  &mt LCTRL LC(V)  &kp LC(X)    &trans        &trans        &trans  &trans  &trans
-&kp LEFT  &kp DOWN_ARROW  &kp RIGHT           &kp LC(Z)             &kp LC(Y)        &kp LC(A)    &trans        &trans        &trans  &trans  &trans  &trans
-                                              &trans                &trans           &kp TAB      &trans        &trans        &trans
+          &trans          &trans              &kp F2                  &mt LA(F4) F4              &kp F5       &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans
+          &kp UP_ARROW    &mt LEFT_ALT MINUS  &mt LEFT_SHIFT LC(C)    &mt LCTRL LC(V)            &kp LC(X)    &trans        &trans        &trans  &trans  &trans
+&kp LEFT  &kp DOWN_ARROW  &kp RIGHT           &kp LC(Z)               &kp LC(Y)                  &kp LC(A)    &trans        &trans        &trans  &trans  &trans  &trans
+                                              &mt KP_ASTERISK PERIOD  &mt KP_DIVIDE KP_NUMBER_0  &kp TAB      &trans        &trans        &trans
             >;
         };
     };
