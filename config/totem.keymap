@@ -111,19 +111,19 @@
 
         num {
             bindings = <
-          &trans    &mt MINUS EQUAL    &kp N7             &kp N8            &kp N9     &kp LS(EXCL)   &kp LS(AT)               &kp LS(POUND)                 &kp LS(DLLR)                        &kp LS(PRCNT)
-          &kp UP    &mt LEFT_ALT PLUS  &mt LEFT_SHIFT N4  &mt LCTRL N5      &kp N6     &kp LS(CARET)  &mt LS(RCTRL) AMPERSAND  &mt LS(RIGHT_SHIFT) ASTERISK  &mt LS(RIGHT_ALT) LEFT_PARENTHESIS  &kp LS(RPAR)
-&kp LEFT  &kp DOWN  &kp RIGHT          &kp N1             &kp N2            &kp N3     &kp MINUS      &kp LS(LT)               &kp LS(GT)                    &mt LEFT_BRACE LEFT_BRACKET         &mt RIGHT_BRACE RIGHT_BRACKET  &trans
-                                       &mt ASTERISK N0    &mt SLASH PERIOD  &kp TAB    &kp TAB        &kp BSPC                 &kp DEL
+          &trans    &mt MINUS EQUAL    &kp N7             &kp N8            &kp N9     &kp LS(EXCL)          &kp LS(AT)               &kp LS(POUND)                 &kp LS(DLLR)                        &kp LS(PRCNT)
+          &kp UP    &mt LEFT_ALT PLUS  &mt LEFT_SHIFT N4  &mt LCTRL N5      &kp N6     &kp LS(CARET)         &mt LS(RCTRL) AMPERSAND  &mt LS(RIGHT_SHIFT) ASTERISK  &mt LS(RIGHT_ALT) LEFT_PARENTHESIS  &kp LS(RPAR)
+&kp LEFT  &kp DOWN  &kp RIGHT          &kp N1             &kp N2            &kp N3     &mt UNDERSCORE MINUS  &kp LS(LT)               &kp LS(GT)                    &mt LEFT_BRACE LEFT_BRACKET         &mt RIGHT_BRACE RIGHT_BRACKET  &trans
+                                       &mt ASTERISK N0    &mt SLASH PERIOD  &kp TAB    &kp TAB               &kp BSPC                 &kp DEL
             >;
         };
 
         func {
             bindings = <
-          &trans    &trans        &kp F2                &mt LA(F4) F4    &kp F5       &bt BT_PRV  &bt BT_NXT  &bt BT_CLR_ALL  &trans  &trans
-          &kp UP    &kp LEFT_ALT  &mt LEFT_SHIFT LC(C)  &mt LCTRL LC(V)  &kp LC(X)    &trans      &trans      &trans          &trans  &trans
-&kp LEFT  &kp DOWN  &kp RIGHT     &kp LC(Z)             &kp LC(Y)        &kp LC(A)    &trans      &trans      &trans          &trans  &trans  &trans
-                                  &trans                &trans           &trans       &trans      &trans      &trans
+          &trans    &trans        &kp F2                &mt LA(F4) F4    &kp F5       &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans
+          &kp UP    &kp LEFT_ALT  &mt LEFT_SHIFT LC(C)  &mt LCTRL LC(V)  &kp LC(X)    &trans        &trans        &trans  &trans  &trans
+&kp LEFT  &kp DOWN  &kp RIGHT     &kp LC(Z)             &kp LC(Y)        &kp LC(A)    &trans        &trans        &trans  &trans  &trans  &bt BT_CLR_ALL
+                                  &trans                &trans           &trans       &trans        &trans        &trans
             >;
         };
     };
