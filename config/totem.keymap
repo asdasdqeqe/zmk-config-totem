@@ -27,7 +27,54 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        numlayer {
+            bindings = <&to 1>;
+            key-positions = <32 33>;
+        };
+
+        funclayer {
+            bindings = <&to 2>;
+            key-positions = <33 34>;
+        };
+
+        baselayer {
+            bindings = <&to 0>;
+            key-positions = <32 34>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <25 24>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <14 13>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <2 3>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <4 3>;
+        };
+
+        f2 {
+            bindings = <&kp F2>;
+            key-positions = <12 13>;
+        };
+
+        moNum {
+            bindings = <&mo 1>;
+            key-positions = <15 16>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
