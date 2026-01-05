@@ -119,7 +119,7 @@
         group: group {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp O &kp A>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp A &kp G &kp G>;
 
             label = "GROUP";
         };
@@ -127,31 +127,15 @@
         ungroup: ungroup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp O &kp A>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp A &kp U &kp U>;
 
             label = "UNGROUP";
-        };
-
-        addRowCol: addRowCol {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp O &kp A>;
-
-            label = "ADDROWCOL";
-        };
-
-        delRowCol: delRowCol {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp O &kp A>;
-
-            label = "DELROWCOL";
         };
 
         freezeUn: freezeUn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_ALT &kp A &kp F &kp F>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp W &kp F &kp F>;
 
             label = "FREEZEUN";
         };
@@ -243,16 +227,16 @@
           &kp UP_ARROW    &mt MINUS EQUAL    &kp N7               &kp N8        &kp N9     &kp LS(EXCL)          &kp LS(AT)               &kp LS(POUND)                 &kp LS(DLLR)                        &kp LS(PRCNT)
           &none           &mt LEFT_ALT PLUS  &mt LEFT_SHIFT N4    &mt LCTRL N5  &kp N6     &kp LS(CARET)         &mt LS(RCTRL) AMPERSAND  &mt LS(RIGHT_SHIFT) ASTERISK  &mt LS(RIGHT_ALT) LEFT_PARENTHESIS  &kp LS(RPAR)
 &kp LEFT  &kp DOWN_ARROW  &kp RIGHT          &kp N1               &kp N2        &kp N3     &mt UNDERSCORE MINUS  &kp LS(LT)               &kp LS(GT)                    &mt LEFT_BRACE LEFT_BRACKET         &mt RIGHT_BRACE RIGHT_BRACKET  &trans
-                                             &mt ASTERISK PERIOD  &mt SLASH N0  &kp TAB    &trans                &kp LC(PG_DN)            &kp LC(PG_UP)
+                                             &mt ASTERISK PERIOD  &mt SLASH N0  &kp TAB    &trans                &kp LC(PG_UP)            &kp LC(PG_DN)
             >;
         };
 
         func {
             bindings = <
-          &kp UP_ARROW    &kp F11       &kp F2                &mt LA(F4) F4    &kp F5       &mt LA(NUMBER_1) LC(LS(L))  &renameSheet  &pivot     &group      &ungroup
-          &none           &kp LEFT_ALT  &mt LEFT_SHIFT LC(C)  &mt LCTRL LC(V)  &kp LC(X)    &widthADJ                   &heightADJ    &wrapUn    &highlight  &fontcolor
-&kp LEFT  &kp DOWN_ARROW  &kp RIGHT     &kp LC(Z)             &kp LC(Y)        &kp LC(A)    &addRowCol                  &delRowCol    &freezeUn  &merge      &unmerge    &trans
-                                        &trans                &trans           &trans       &trans                      &trans        &trans
+          &kp UP_ARROW    &kp F11       &kp F2                &mt LA(F4) F4    &kp F5       &mt LA(NUMBER_1) LC(LS(L))  &renameSheet   &pivot             &group      &ungroup
+          &none           &kp LEFT_ALT  &mt LEFT_SHIFT LC(C)  &mt LCTRL LC(V)  &kp LC(X)    &widthADJ                   &heightADJ     &wrapUn            &highlight  &fontcolor
+&kp LEFT  &kp DOWN_ARROW  &kp RIGHT     &kp LC(Z)             &kp LC(Y)        &kp LC(A)    &kp LC(LS(EQUAL))           &kp LC(MINUS)  &freezeUn          &merge      &unmerge    &trans
+                                        &trans                &trans           &trans       &trans                      &kp LC(PG_UP)  &kp LC(PAGE_DOWN)
             >;
         };
 
