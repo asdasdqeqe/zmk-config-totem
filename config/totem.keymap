@@ -84,6 +84,117 @@
             bindings = <&kp PAGE_DOWN>;
             key-positions = <26 27>;
         };
+
+        btLayer {
+            bindings = <&mo 3>;
+            key-positions = <34 35>;
+        };
+    };
+
+    macros {
+        pivot: pivot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp N &kp V &kp T>;
+
+            label = "PIVOT";
+        };
+
+        widthADJ: widthADJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp O &kp I>;
+
+            label = "WIDTHADJ";
+        };
+
+        heightADJ: heightADJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp O &kp A>;
+
+            label = "HEIGHTADJ";
+        };
+
+        group: group {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp O &kp A>;
+
+            label = "GROUP";
+        };
+
+        ungroup: ungroup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp O &kp A>;
+
+            label = "UNGROUP";
+        };
+
+        addRowCol: addRowCol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp O &kp A>;
+
+            label = "ADDROWCOL";
+        };
+
+        delRowCol: delRowCol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp O &kp A>;
+
+            label = "DELROWCOL";
+        };
+
+        freezeUn: freezeUn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp A &kp F &kp F>;
+
+            label = "FREEZEUN";
+        };
+
+        wrapUn: wrapUn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp W>;
+
+            label = "WRAPUN";
+        };
+
+        highlight: highlight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp H>;
+
+            label = "HIGHLIGHT";
+        };
+
+        fontcolor: fontcolor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp F &kp C>;
+
+            label = "FONTCOLOR";
+        };
+
+        merge: merge {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp M &kp M>;
+
+            label = "MERGE";
+        };
+
+        unmerge: unmerge {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp H &kp M &kp U>;
+
+            label = "UNMERGE";
+        };
     };
 
     keymap {
@@ -111,7 +222,7 @@
         &kp Q  &kp W           &kp F             &kp P        &kp B      &kp J           &kp L        &kp U                &kp Y             &mt DOUBLE_QUOTES SQT
         &kp A  &mt LEFT_ALT R  &mt LEFT_SHIFT S  &mt LCTRL T  &kp G      &mt LEFT_GUI M  &mt RCTRL N  &mt RIGHT_SHIFT E    &mt RALT I        &kp O
 &trans  &kp Z  &kp X           &kp C             &kp D        &kp V      &kp K           &kp H        &mt SEMICOLON COMMA  &mt COLON PERIOD  &mt BACKSLASH SLASH    &mt QUESTION EXCLAMATION
-                               &mo 1             &kp SPACE    &kp TAB    &kp ENTER       &kp BSPC     &kp DELETE
+                               &mo 1             &kp SPACE    &kp TAB    &kp SPACE       &kp BSPC     &kp DELETE
             >;
         };
 
@@ -124,16 +235,25 @@
           &kp UP_ARROW    &mt MINUS EQUAL    &kp N7               &kp N8        &kp N9     &kp LS(EXCL)          &kp LS(AT)               &kp LS(POUND)                 &kp LS(DLLR)                        &kp LS(PRCNT)
           &none           &mt LEFT_ALT PLUS  &mt LEFT_SHIFT N4    &mt LCTRL N5  &kp N6     &kp LS(CARET)         &mt LS(RCTRL) AMPERSAND  &mt LS(RIGHT_SHIFT) ASTERISK  &mt LS(RIGHT_ALT) LEFT_PARENTHESIS  &kp LS(RPAR)
 &kp LEFT  &kp DOWN_ARROW  &kp RIGHT          &kp N1               &kp N2        &kp N3     &mt UNDERSCORE MINUS  &kp LS(LT)               &kp LS(GT)                    &mt LEFT_BRACE LEFT_BRACKET         &mt RIGHT_BRACE RIGHT_BRACKET  &trans
-                                             &mt ASTERISK PERIOD  &mt SLASH N0  &kp TAB    &kp TAB               &kp BSPC                 &kp DEL
+                                             &mt ASTERISK PERIOD  &mt SLASH N0  &kp TAB    &trans                &kp LC(PG_DN)            &kp LC(PG_UP)
             >;
         };
 
         func {
             bindings = <
-          &kp UP_ARROW    &kp F11       &kp F2                &mt LA(F4) F4    &kp F5       &bt BT_PRV    &bt BT_NXT    &trans        &trans        &trans
-          &none           &kp LEFT_ALT  &mt LEFT_SHIFT LC(C)  &mt LCTRL LC(V)  &kp LC(X)    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&kp LEFT  &kp DOWN_ARROW  &kp RIGHT     &kp LC(Z)             &kp LC(Y)        &kp LC(A)    &trans        &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
-                                        &trans                &trans           &trans       &trans        &trans        &trans
+          &kp UP_ARROW    &kp F11       &kp F2                &mt LA(F4) F4    &kp F5       &mt LA(NUMBER_1) LC(LS(L))  &trans      &pivot     &group      &ungroup
+          &none           &kp LEFT_ALT  &mt LEFT_SHIFT LC(C)  &mt LCTRL LC(V)  &kp LC(X)    &widthADJ                   &heightADJ  &wrapUn    &highlight  &fontcolor
+&kp LEFT  &kp DOWN_ARROW  &kp RIGHT     &kp LC(Z)             &kp LC(Y)        &kp LC(A)    &addRowCol                  &delRowCol  &freezeUn  &merge      &unmerge    &trans
+                                        &trans                &trans           &trans       &trans                      &trans      &trans
+            >;
+        };
+
+        bluetooth {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &bt BT_PRV    &bt BT_NXT    &trans        &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans  &trans  &bt BT_CLR_ALL
+                        &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
     };
