@@ -71,17 +71,17 @@
         };
 
         moBase {
-            bindings = <&mo 1>;
+            bindings = <&mo 0>;
             key-positions = <5 6>;
         };
 
         moNum {
-            bindings = <&kp PG_UP>;
+            bindings = <&mo 1>;
             key-positions = <15 16>;
         };
 
         moFunc {
-            bindings = <&kp PAGE_DOWN>;
+            bindings = <&mo 2>;
             key-positions = <26 27>;
         };
 
