@@ -32,17 +32,17 @@
 
         numlayer {
             bindings = <&to 1>;
-            key-positions = <32 33>;
+            key-positions = <32 10>;
         };
 
         funclayer {
             bindings = <&to 2>;
-            key-positions = <33 34>;
+            key-positions = <32 21>;
         };
 
         baselayer {
             bindings = <&to 0>;
-            key-positions = <32 34>;
+            key-positions = <32 0>;
         };
 
         esc {
@@ -70,17 +70,17 @@
             key-positions = <23 24>;
         };
 
-        moNum {
+        moBase {
             bindings = <&mo 1>;
-            key-positions = <15 16>;
-        };
-
-        pg_up {
-            bindings = <&kp PG_UP>;
             key-positions = <5 6>;
         };
 
-        pg_down {
+        moNum {
+            bindings = <&kp PG_UP>;
+            key-positions = <15 16>;
+        };
+
+        moFunc {
             bindings = <&kp PAGE_DOWN>;
             key-positions = <26 27>;
         };
