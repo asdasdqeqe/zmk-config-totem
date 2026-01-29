@@ -99,6 +99,11 @@
             bindings = <&kp HOME>;
             key-positions = <20 10>;
         };
+
+        newtabExcel {
+            bindings = <&kp LS(F11)>;
+            key-positions = <1 2 3>;
+        };
     };
 
     macros {
